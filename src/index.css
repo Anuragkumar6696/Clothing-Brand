@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-brand-primary: #1A1918;
+  --color-brand-secondary: #353330;
+  --color-brand-accent: #C25E38;
+  --color-brand-accent-hover: #A94E2B;
+  --color-brand-accent-light: #F9ECE6;
+  --color-brand-warm: #FDFBF7;
+  --color-brand-surface: #F7F4EC;
+  --color-brand-card: #FFFFFF;
+  --color-brand-border: #E7E2D6;
+  --color-brand-border-dark: #D4CDBC;
+  --color-brand-muted: #736E66;
+}
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FDFBF7;
+  color: #1A1918;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for clean boutique experience */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4CDBC;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A94E2B;
+}
+
+/* Utilities for editorial touches */
+.font-serif-display {
+  font-family: var(--font-serif);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Mobile-first usability enhancements */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch targets & phone safe padding */
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
